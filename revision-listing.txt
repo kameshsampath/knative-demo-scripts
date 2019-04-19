@@ -1,0 +1,2 @@
+Order   REVISON
+metadata.labels.serving\.knative\.dev\/configurationGeneration .metadata.name

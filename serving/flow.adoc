@@ -1,0 +1,19 @@
+= Flow of the scripts
+
+- Deploy the first version of the service `./deploy-service.sh`, wait for pods to be deployed
+
+- Run `../poll.sh` in a new terminal
+
+- Deploy new revision `./deploy-new-revision.sh`
+
+- Watch changes in the output of the poll command
+
+- Run `./show-revisions.sh` to list revisions in descending order
+
+- Run `./pin-revision.sh` to see revision pinning happening
+
+- Run `./show-revisions.sh` to list revisions again to show no new revisions has been created
+
+- Edit the ksvc `greeter` to show the pinned revision 
+
+- Clean up `../cleanup.sh`
