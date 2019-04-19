@@ -1,0 +1,23 @@
+= Flow of the scripts
+
+- Run `../cleanup.sh` to make sure we run with clean environment 
+
+- Deploy the first version of the service `./deploy-rev1.sh`, wait for pods to be deployed
+
+- Deploy new revision `./deploy-rev2.sh`
+
+- Run `../show-revisions.sh` to show two revisions
+
+- Run `../poll.sh` in a new terminal, you should see blank responses
+
+- Run `./create-default-route.sh` to create the route and the poller should now start getting responses
+
+- Run `./all-to-rev1.sh`, shows that we route all traffic to v1
+
+- Run `./all-to-rev2.sh`, shows that we route all traffic to v2
+
+- Run `./50-to-each-rev.sh`, shows that we route all traffic 50-50 between v1 and v2
+
+- Run `./rev1-75-rev2-25.sh`, shows that we route all traffic 75-25 between v1 and v2
+
+- Clean up `../cleanup.sh`

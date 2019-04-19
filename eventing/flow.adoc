@@ -1,0 +1,15 @@
+= Flow of the scripts
+
+- Run `../cleanup.sh` to make sure we run with clean environment 
+
+- Deploy the event source `./create-event-source.sh`
+
+- Deploy the event sink `./create-event-sink.sh`
+
+- Run `./sourceLogs.sh` to tail event source logs 
+
+- Run `./sinkLogs.sh` to tail event sink logs
+
+you will start to see the source sending message every `1 min` and the same will be logged in the sink
+
+- Clean up `../cleanup.sh`

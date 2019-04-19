@@ -1,0 +1,21 @@
+= Knative Demo Scripts
+:experimental:
+
+The scripts used for various Knative demos. If you want to learn Knative end to end then visit https://github.com/redhat-developer-demos/knative[Knative Tutorial]
+
+== Running scripts
+
+The scripts require few setup, after you clone the repo via `git clone https://github.com/kameshsampath/knative-demo-scripts`
+
+```shell
+./setup.sh
+source ./setEnv.sh
+```
+
+The run the scripts as needed from the sub folders of the repo:
+
+- **link:./serving[serving]** : Demo Knative serving
+- **link:./routing[routing]**: Demo configurations, routes and traffic distribution
+- **link:./scaling[scaling]**: Demo Knative Auto scale
+- **link:./eventing[eventing]**: Demo Knative eventing
+- **link:./build[build]**: Demo Knative build
