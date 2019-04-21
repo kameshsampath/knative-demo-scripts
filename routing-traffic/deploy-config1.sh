@@ -4,8 +4,6 @@ set -eu
 
 source "../setEnv.sh"
 
-echo $TUTORIAL_HOME
-
 cat "$TUTORIAL_HOME/03-configs-and-routes/config/configuration-rev1.yaml" | \
   sed 's~dev.local/rhdevelopers/greeter:0.0.1~quay.io/rhdevelopers/knative-tutorial-greeter:quarkus~g;' | \
   kubectl -n $NAMESPACE apply -f -

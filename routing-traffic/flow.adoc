@@ -2,11 +2,9 @@
 
 - Run `../cleanup.sh` to make sure we run with clean environment 
 
-- Deploy the first version of the service `./deploy-rev1.sh`, wait for pods to be deployed
+- Deploy the first version of the service `./deploy-config1.sh`, wait for pods to be deployed
 
-- Deploy new revision `./deploy-rev2.sh`
-
-- Run `../show-revisions.sh` to show two revisions
+- Deploy new revision `./deploy-config2.sh`
 
 - Run `../poll.sh` in a new terminal, you should see blank responses
 

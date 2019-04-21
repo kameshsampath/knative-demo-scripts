@@ -7,7 +7,7 @@ source "../setEnv.sh"
 echo $TUTORIAL_HOME
 
 cat "$TUTORIAL_HOME/02-basics/knative/service.yaml" | \
-  sed 's~dev.local/rhdevelopers/greeter:0.0.1~quay.io/rhdevelopers/knative-tutorial-greeter:sb~g;' | \
+  sed 's~dev.local/rhdevelopers/greeter:0.0.1~quay.io/rhdevelopers/knative-tutorial-greeter:quarkus~g;' | \
   kubectl -n $NAMESPACE apply -f -
 
 # Wait until pods are started

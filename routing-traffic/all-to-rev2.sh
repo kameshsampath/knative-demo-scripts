@@ -4,8 +4,6 @@ set -eu
 
 source "../setEnv.sh"
 
-echo $TUTORIAL_HOME
-
 REVISION_1=`kubectl -n $NAMESPACE get rev -l serving.knative.dev/configuration=greeter --sort-by="{.metadata.creationTimestamp}" | awk 'NR==2{print $1}'`
 REVISION_2=`kubectl -n $NAMESPACE get rev -l serving.knative.dev/configuration=greeter --sort-by="{.metadata.creationTimestamp}" | awk 'NR==3{print $1}'`
 

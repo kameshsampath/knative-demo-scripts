@@ -1,0 +1,19 @@
+= Flow of the scripts
+
+- Run `../cleanup.sh` to make sure we run with clean environment 
+
+- Run `./config.sh` to configure 1m stable window and 30 secs grace 
+
+- Deploy service `./scale-to-zero.sh`, service allowing to scale down to zero
+
+- Run `../monitor-activator.sh` , to show switching of route from service to activator immediately after stable-window
+
+- Run `../cleanup.sh` to make sure we run with clean environment 
+
+- Deploy the first version of the service `./deploy-service.sh`, the service wil show two pods
+
+- Run `./runLoad.sh` to run the load test and show scaled pods
+
+- Run `./open-grafana.sh` to show the grafana dashboard and Serving Scaling and Debugging
+
+- Clean up `../cleanup.sh`
