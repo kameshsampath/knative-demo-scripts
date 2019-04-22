@@ -1,0 +1,11 @@
+= Flow of the scripts
+
+- Run `../cleanup.sh` to make sure we run with clean environment 
+
+- Create build `./buildLogs.sh`
+
+- Run `./list-containers.sh` list all the build containers that will be created by build
+
+- Run `./buildLogs.sh` to tail build logs
+
+- Clean up `../cleanup.sh`

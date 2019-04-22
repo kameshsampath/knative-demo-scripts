@@ -5,7 +5,7 @@ IP_ADDRESS=$(kubectl -n istio-system get svc istio-ingressgateway -o yaml | yq r
 
 export TUTORIAL_HOME=$DIR/knative-tutorial
 export IP_ADDRESS=${IP_ADDRESS:-"$(minikube ip):$(kubectl get svc istio-ingressgateway --namespace istio-system --output 'jsonpath={.spec.ports[?(@.port==80)].nodePort}')"}
-export NAMESPACE='knativetutorial'
+export NAMESPACE=${NAMESPACE:-'knativetutorial'}
 
 # GKE 
 export CLUSTER_NAME=knative
